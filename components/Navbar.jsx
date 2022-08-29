@@ -40,7 +40,7 @@ const Navbar = () => {
           <li className={styles.listItem}>Events</li>
           <li className={styles.listItem}>Blog</li>
           <li className={styles.listItem}>
-            <a href="mailto:abdabdulla78.com" target="_blank">
+            <a href="mailto:abdabdulla78.com" target="_blank" rel="noreferrer">
               Contact
             </a>
           </li>
