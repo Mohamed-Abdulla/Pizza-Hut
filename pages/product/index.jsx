@@ -13,6 +13,7 @@ const Index = ({ pizzaList }) => {
 };
 
 export default Index;
+
 export const getServerSideProps = async (ctx) => {
   const myCookie = ctx.req?.cookies || "";
   let admin = false;
