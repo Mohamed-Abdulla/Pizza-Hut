@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { Grow } from "@mui/material";
 import PizzaList from "../../components/PizzaList";
+import { BASE_URL } from "../../util";
 
 const Index = ({ pizzaList }) => {
   return (

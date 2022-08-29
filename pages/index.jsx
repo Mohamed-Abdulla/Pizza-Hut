@@ -6,6 +6,7 @@ import Add from "../components/Add";
 import AddButton from "../components/AddButton";
 import axios from "axios";
 import { useState } from "react";
+import { BASE_URL } from "../util";
 
 export default function Home({ pizzaList, admin }) {
   const [close, setClose] = useState(true);
