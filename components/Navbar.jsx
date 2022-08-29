@@ -38,11 +38,7 @@ const Navbar = () => {
             </span>
           </Link>
           <li className={styles.listItem}>Events</li>
-          <li className={styles.listItem}>
-            <a href="https://www.pizzacraft.com/blogs/pizzacraft-blog" target="_blank">
-              Blog
-            </a>
-          </li>
+          <li className={styles.listItem}>Blog</li>
           <li className={styles.listItem}>
             <a href="mailto:abdabdulla78.com" target="_blank">
               Contact
