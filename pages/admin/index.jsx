@@ -4,6 +4,7 @@ import { useState } from "react";
 import styles from "../../styles/Admin.module.css";
 import { Button } from "@mui/material";
 import React from "react";
+import { BASE_URL } from "../../util";
 
 const Index = ({ orders, products }) => {
   const [pizzaList, setPizzaList] = useState(products);
@@ -13,7 +14,7 @@ const Index = ({ orders, products }) => {
   const handleDelete = async (id) => {
     try {
       if (window.confirm("Are you sure you want to delete this product?")) {
-        await axios.delete("http://localhost:3000/api/products/" + id);
+        await axios.delete(`${BASE_URL}/api/products` + id);
         setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
       }
     } catch (err) {
@@ -24,7 +25,7 @@ const Index = ({ orders, products }) => {
     const item = orderList.filter((order) => order._id === id)[0]; //each order
     const currentStatus = item.status;
     try {
-      const res = await axios.put("http://localhost:3000/api/orders/" + id, {
+      const res = await axios.put(`${BASE_URL}/api/orders` + id, {
         status: currentStatus + 1,
       });
       setOrderList([
@@ -122,8 +123,8 @@ export const getServerSideProps = async (ctx) => {
       },
     };
   }
-  const productRes = await axios.get("http://localhost:3000/api/products");
-  const orderRes = await axios.get("http://localhost:3000/api/orders");
+  const productRes = await axios.get(`${BASE_URL}/api/products`);
+  const orderRes = await axios.get(`${BASE_URL}/api/orders`);
 
   return {
     props: {

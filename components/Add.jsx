@@ -4,6 +4,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { Button, CircularProgress } from "@mui/material";
 import { UploadFile, Close, Cancel } from "@mui/icons-material";
+import { BASE_URL } from "../util/index";
 
 const Add = ({ setClose }) => {
   const [file, setFile] = useState(null);
@@ -42,7 +43,7 @@ const Add = ({ setClose }) => {
         extraOptions,
         img: url,
       };
-      await axios.post("http://localhost:3000/api/products", newProduct);
+      await axios.post(`${BASE_URL}/api/products`, newProduct);
       setUploading(false);
       setClose(true);
       // console.log(uploadRes.data);
