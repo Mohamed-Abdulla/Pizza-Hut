@@ -1,0 +1,153 @@
+.container {
+  height: 100px;
+  padding: 0px 50px;
+  background-color: #d1411e;
+  /* background-color: #e94b3cff; */
+  /* background-color: #dba24a; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.item:nth-child(2) {
+  flex: 3;
+}
+
+.item:last-child {
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.callButton {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.texts {
+  margin-left: 20px;
+  color: white;
+}
+
+.text:first-child {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.text:last-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.list {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: white;
+}
+
+.listItem {
+  margin: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+}
+.listItem::before {
+  background-color: rgb(249, 249, 249);
+  border-radius: 0px 0px 4px 4px;
+  bottom: -6px;
+  content: "";
+  height: 2px;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  right: 0px;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  visibility: hidden;
+  width: auto;
+}
+.listItem:hover::before {
+  transform: scaleX(1);
+  visibility: visible;
+  opacity: 1 !important;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo span {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.cart {
+  position: relative;
+}
+
+.counter {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #d1411e;
+}
+
+/* for mobile devices*/
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0px 25px;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .listItem {
+    display: none;
+  }
+  .item:nth-child(1) {
+    flex: 2.4;
+  }
+  .texts {
+    margin-left: 12px;
+  }
+
+  .text:first-child {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .callButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .text:last-child {
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
