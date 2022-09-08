@@ -13,7 +13,7 @@ export default function Home({ pizzaList, admin }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Pizza Paradise</title>
+        <title>Pizza Hut</title>
         <meta name="description" content="Best Pizza in NY" />
         <link rel="icon" href="../img/pizza.png" />
       </Head>
