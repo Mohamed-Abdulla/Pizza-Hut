@@ -40,9 +40,7 @@ const Navbar = () => {
           <li className={styles.listItem}>Events</li>
           <li className={styles.listItem}>Blog</li>
           <li className={styles.listItem}>
-            <a href="mailto:abdabdulla78.com" target="_blank" rel="noopener	">
-              Contact
-            </a>
+            <a href="mailto:abdabdulla78.com">Contact</a>
           </li>
         </ul>
       </div>
