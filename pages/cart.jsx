@@ -14,7 +14,7 @@ const Cart = () => {
 
   return (
     <>
-      {cart.length > 0 ? (
+      {cart.length !== 0 ? (
         <div className={styles.container}>
           <div className={styles.left}>
             <table className={styles.table}>

@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     // Initialize razorpay object
     const razorpay = new Razorpay({
-      key_id: process.env.RAZORPAY_KEY,
+      key_id: process.env.NEXT_PUBLIC_RAZORPAY_KEY,
       key_secret: process.env.RAZORPAY_SECRET,
     });
 

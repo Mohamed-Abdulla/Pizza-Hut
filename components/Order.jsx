@@ -73,7 +73,7 @@ const Order = ({ open, handleClose }) => {
     const { amount, id, currency } = data.data;
 
     const options = {
-      key: process.env.RAZORPAY_KEY || "rzp_test_3H8BUoWiGQP6lq", // Enter the Key ID generated from the Dashboard
+      key: process.env.NEXT_PUBLIC_RAZORPAY_KEY, // Enter the Key ID generated from the Dashboard
       name: "Pizza Paradise",
       currency: currency,
       amount: amount.toString(),
